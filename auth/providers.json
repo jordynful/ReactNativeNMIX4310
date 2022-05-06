@@ -1,0 +1,23 @@
+{
+    "anon-user": {
+        "name": "anon-user",
+        "type": "anon-user",
+        "disabled": true
+    },
+    "api-key": {
+        "name": "api-key",
+        "type": "api-key",
+        "disabled": true
+    },
+    "local-userpass": {
+        "name": "local-userpass",
+        "type": "local-userpass",
+        "config": {
+            "autoConfirm": true,
+            "resetPasswordSubject": "click this link to reset your password",
+            "resetPasswordUrl": "https://resetpassword324537895.com",
+            "runConfirmationFunction": false
+        },
+        "disabled": false
+    }
+}
