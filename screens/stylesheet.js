@@ -3,12 +3,15 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   inputContainer: {
     padding: 5,
+    
   },
   inputStyle: {
     borderColor: "black",
-    borderWidth: 1,
+    borderWidth: 2,
     padding: 10,
     borderRadius: 2,
+    width: 300,
+    backgroundColor: "#fff"
   },
   manageTeamWrapper: {
     width: 350,
