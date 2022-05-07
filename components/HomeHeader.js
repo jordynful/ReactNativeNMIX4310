@@ -18,42 +18,14 @@ const HomeHeader = ({ onSearch }) => {
           alignItems: "center",
         }}
       >
-        <Image
-          source={assets.logo}
-          resizeMode="contain"
-          style={{ width: 90, height: 25 }}
-        />
 
         <View style={{ width: 45, height: 45 }}>
-          <Image
-            source={assets.person01}
-            resizeMode="contain"
-            style={{ width: "100%", height: "100%" }}
-          />
-          <Image
-            source={assets.badge}
-            resizeMode="contain"
-            style={{
-              position: "absolute",
-              width: 15,
-              height: 15,
-              bottom: 0,
-              right: 0,
-            }}
-          />
+         
+          
         </View>
       </View>
 
       <View style={{ marginVertical: SIZES.font }}>
-        <Text
-          style={{
-            fontFamily: FONTS.regular,
-            fontSize: SIZES.small,
-            color: COLORS.white,
-          }}
-        >
-          Hello Victoria 👋
-        </Text>
 
         <Text
           style={{
@@ -63,7 +35,7 @@ const HomeHeader = ({ onSearch }) => {
             marginTop: SIZES.base / 2,
           }}
         >
-          Let’s find masterpiece Art
+          Find your developer service!
         </Text>
       </View>
 
@@ -85,7 +57,7 @@ const HomeHeader = ({ onSearch }) => {
             style={{ width: 20, height: 20, marginRight: SIZES.base }}
           />
           <TextInput
-            placeholder="Search NFTs"
+            placeholder="Search services"
             style={{ flex: 1 }}
             onChangeText={onSearch}
           />

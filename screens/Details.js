@@ -19,11 +19,7 @@ const DetailsHeader = ({ data, navigation }) => (
       top={StatusBar.currentHeight + 10}
     />
 
-    <CircleButton
-      imgUrl={assets.heart}
-      right={15}
-      top={StatusBar.currentHeight + 10}
-    />
+
   </View>
 );
 
@@ -31,7 +27,8 @@ const Details = ({ route, navigation }) => {
   const { data } = route.params;
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1,
+    backgroundColor: "#fff" }}>
       <FocusedStatusBar
         barStyle="dark-content"
         backgroundColor="transparent"
@@ -50,12 +47,11 @@ const Details = ({ route, navigation }) => {
           zIndex: 1,
         }}
       >
-        <RectButton minWidth={170} fontSize={SIZES.large} text = {"place bid"} {...SHADOWS.dark} />
+        <RectButton minWidth={170} fontSize={SIZES.large} text = {"Add service"} {...SHADOWS.dark} />
       </View>
 
       <FlatList
         data={data.bids}
-        renderItem={({ item }) => <DetailsBid bid={item} />}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
@@ -68,17 +64,8 @@ const Details = ({ route, navigation }) => {
             <View style={{ padding: SIZES.font }}>
               <DetailsDesc data={data} />
 
-              {data.bids.length > 0 && (
-                <Text
-                  style={{
-                    fontSize: SIZES.font,
-                    fontFamily: FONTS.semiBold,
-                    color: COLORS.primary,
-                  }}
-                >
-                  Current Bid
-                </Text>
-              )}
+            
+              
             </View>
           </React.Fragment>
         )}

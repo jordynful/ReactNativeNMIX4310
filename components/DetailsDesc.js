@@ -3,10 +3,10 @@ import { View, Text } from "react-native";
 
 import { EthPrice, NFTTitle } from "./SubInfo";
 import { COLORS, SIZES, FONTS } from "../constants";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const DetailsDesc = ({ data }) => {
-  const [text, setText] = useState(data.description.slice(0, 100));
-  const [readMore, setReadMore] = useState(false);
+  
 
   return (
     <>
@@ -51,27 +51,39 @@ const DetailsDesc = ({ data }) => {
               lineHeight: SIZES.large,
             }}
           >
-            {text}
-            {!readMore && "..."}
-            <Text
-              style={{
-                color: COLORS.primary,
-                fontSize: SIZES.small,
-                fontFamily: FONTS.semiBold,
-              }}
-              onPress={() => {
-                if (!readMore) {
-                  setText(data.description);
-                  setReadMore(true);
-                } else {
-                  setText(data.description.slice(0, 100));
-                  setReadMore(false);
-                }
-              }}
-            >
-              {readMore ? " Show Less" : " Read More"}
+            {data.description}
+            {/* {!readMore && "..."} */}
+            
             </Text>
-          </Text>
+            <View style = {{
+              marginTop: 80,
+              backgroundColor:COLORS.secondary,
+             
+              padding:10,
+              borderRadius:10
+            }}>
+            <Text
+          style={{
+            fontSize: SIZES.font,
+            fontFamily: FONTS.semiBold,
+            color: COLORS.primary,
+            
+            alignSelf: "center",
+          
+          }}
+        >
+          Request Service
+        </Text>
+        <Text style={{
+              color: COLORS.white,
+              fontSize: SIZES.small,
+              fontFamily: FONTS.regular,
+              lineHeight: SIZES.large,
+              textAlign: "center"
+            }}>
+              To request this service, press the "Add Service" button below and someone will reach out through email to contact you for more information.
+            </Text>
+            </View>
         </View>
       </View>
     </>

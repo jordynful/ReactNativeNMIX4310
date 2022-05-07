@@ -18,6 +18,11 @@ import person02 from "../assets/images/person02.png";
 import person03 from "../assets/images/person03.png";
 import person04 from "../assets/images/person04.png";
 import logo3 from "../assets/images/logo3.jpg";
+
+import comp from "../assets/images/comp.png";
+import iosA from "../assets/images/ios.png";
+import appM from "../assets/images/multi.png";
+import cons from "../assets/images/consultation.png";
 export default {
   badge,
   eth,
@@ -39,4 +44,8 @@ export default {
   person03,
   person04,
   logo3,
+  comp,
+  iosA,
+  appM,
+  cons,
 };

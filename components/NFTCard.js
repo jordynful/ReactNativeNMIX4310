@@ -36,7 +36,7 @@ const NFTCard = ({ data }) => {
           }}
         />
 
-        <CircleButton imgUrl={assets.heart} right={10} top={10} />
+        {/* <CircleButton imgUrl={assets.heart} right={10} top={10} /> */}
       </View>
 
       <SubInfo />
@@ -45,8 +45,9 @@ const NFTCard = ({ data }) => {
         <NFTTitle
           title={data.name}
           subTitle={data.creator}
-          titleSize={SIZES.large}
+          titleSize={40}
           subTitleSize={SIZES.small}
+          
         />
 
         <View
@@ -61,7 +62,7 @@ const NFTCard = ({ data }) => {
           <RectButton
             minWidth={120}
             fontSize={SIZES.font}
-            text = {"place bid"}
+            text = {"More info"}
             handlePress={() => navigation.navigate("Details", { data })}
           />
         </View>

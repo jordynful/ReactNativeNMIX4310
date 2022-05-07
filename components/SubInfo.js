@@ -11,6 +11,8 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
           fontFamily: FONTS.semiBold,
           fontSize: titleSize,
           color: COLORS.primary,
+          marginTop: -200,
+          alignSelf: "center"
         }}
       >
         {title}
@@ -22,7 +24,7 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
           color: COLORS.primary,
         }}
       >
-        by {subTitle}
+      
       </Text>
     </View>
   );
@@ -31,19 +33,15 @@ export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
 export const EthPrice = ({ price }) => {
   return (
     <View style={{ flexDirection: "row", alignItems: "center" }}>
-      <Image
-        source={assets.eth}
-        resizeMode="contain"
-        style={{ width: 20, height: 20, marginRight: 2 }}
-      />
       <Text
         style={{
           fontFamily: FONTS.medium,
           fontSize: SIZES.font,
           color: COLORS.primary,
+          marginTop: 15
         }}
       >
-        {price}
+        ${price}
       </Text>
     </View>
   );
@@ -66,51 +64,11 @@ const ImageCmp = ({ imgUrl, index }) => {
 export const People = () => {
   return (
     <View style={{ flexDirection: "row" }}>
-      {[assets.person02, assets.person03, assets.person04].map(
-        (imgUrl, index) => (
-          <ImageCmp imgUrl={imgUrl} index={index} key={`People-${index}`} />
-        )
-      )}
+    
     </View>
   );
 };
 
-export const EndDate = () => {
-  return (
-    <View
-      style={{
-        paddingHorizontal: SIZES.font,
-        paddingVertical: SIZES.base,
-        backgroundColor: COLORS.white,
-        borderRadius: SIZES.font,
-        justifyContent: "center",
-        alignItems: "center",
-        ...SHADOWS.light,
-        elevation: 1,
-        maxWidth: "50%",
-      }}
-    >
-      <Text
-        style={{
-          fontFamily: FONTS.regular,
-          fontSize: SIZES.small,
-          color: COLORS.primary,
-        }}
-      >
-        Ending in
-      </Text>
-      <Text
-        style={{
-          fontFamily: FONTS.semiBold,
-          fontSize: SIZES.medium,
-          color: COLORS.primary,
-        }}
-      >
-        12h 30m
-      </Text>
-    </View>
-  );
-};
 
 export const SubInfo = () => {
   return (
@@ -118,13 +76,37 @@ export const SubInfo = () => {
       style={{
         width: "100%",
         paddingHorizontal: SIZES.font,
-        marginTop: -SIZES.extraLarge,
+        marginTop: -SIZES.extraLarge, 
         flexDirection: "row",
         justifyContent: "space-between",
       }}
     >
       <People />
-      <EndDate />
+      {/* <EndDate /> */}
+    </View>
+  );
+};
+
+
+export const submitInfo = () => {
+  return (
+    <View
+      style={{
+        width: "100%",
+        paddingHorizontal: SIZES.font,
+        flexDirection: "row",
+        justifyContent: "space-between",
+      }}
+    >
+     <Text style={{
+              color: COLORS.secondary,
+              fontSize: SIZES.small,
+              fontFamily: FONTS.regular,
+              lineHeight: SIZES.large,
+            }}>
+              To request this service, press the "Add Service" button below and someone will reach out through email to contact you for more information.
+            </Text>
+      {/* <EndDate /> */}
     </View>
   );
 };

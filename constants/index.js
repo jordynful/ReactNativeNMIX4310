@@ -1,8 +1,8 @@
 import { COLORS, SHADOWS, SIZES, FONTS } from "./theme";
 
 
-import { NFTData } from "./dummy";
+import { Serv } from "./serv";
 
 import assets from "./assets";
 
-export { assets, COLORS, SHADOWS, SIZES, FONTS, NFTData };
+export { assets, COLORS, SHADOWS, SIZES, FONTS, Serv };
