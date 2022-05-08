@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text, Image, TextInput } from "react-native";
-
-import { COLORS, FONTS, SIZES, assets } from "../constants";
-
+import { useNavigation } from "@react-navigation/native";
+import { COLORS, FONTS, SIZES, assets, SHADOWS } from "../constants";
+import { RectButton, CircleButton } from "./Button";
 const HomeHeader = ({ onSearch }) => {
+    const navigation = useNavigation();
   return (
     <View
       style={{
-        backgroundColor: COLORS.primary,
+        backgroundColor: COLORS.secondary,
         padding: SIZES.font,
       }}
     >
@@ -19,24 +20,25 @@ const HomeHeader = ({ onSearch }) => {
         }}
       >
 
-        <View style={{ width: 45, height: 45 }}>
+    
+         <Text style = {
+             {fontFamily: FONTS.semiBold,
+          fontSize: 50,
+          color: COLORS.white,
          
+          alignSelf: "center"}}>
+             Jordyn Fulbright
+         </Text>
+         <RectButton minWidth={170} fontSize={SIZES.large} text={"Requests"} 
+                {...SHADOWS.dark} 
+                handlePress={() => navigation.navigate("request")}/>
           
-        </View>
+        
       </View>
 
       <View style={{ marginVertical: SIZES.font }}>
 
-        <Text
-          style={{
-            fontFamily: FONTS.bold,
-            fontSize: SIZES.large,
-            color: COLORS.white,
-            marginTop: SIZES.base / 2,
-          }}
-        >
-          Find your developer service!
-        </Text>
+       
       </View>
 
       <View style={{ marginTop: SIZES.font }}>

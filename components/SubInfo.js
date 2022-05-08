@@ -38,7 +38,7 @@ export const EthPrice = ({ price }) => {
           fontFamily: FONTS.medium,
           fontSize: SIZES.font,
           color: COLORS.primary,
-          marginTop: 15
+          marginTop: 15,
         }}
       >
         ${price}
@@ -61,13 +61,6 @@ const ImageCmp = ({ imgUrl, index }) => {
   );
 };
 
-export const People = () => {
-  return (
-    <View style={{ flexDirection: "row" }}>
-    
-    </View>
-  );
-};
 
 
 export const SubInfo = () => {
@@ -81,32 +74,8 @@ export const SubInfo = () => {
         justifyContent: "space-between",
       }}
     >
-      <People />
-      {/* <EndDate /> */}
+   
     </View>
   );
 };
 
-
-export const submitInfo = () => {
-  return (
-    <View
-      style={{
-        width: "100%",
-        paddingHorizontal: SIZES.font,
-        flexDirection: "row",
-        justifyContent: "space-between",
-      }}
-    >
-     <Text style={{
-              color: COLORS.secondary,
-              fontSize: SIZES.small,
-              fontFamily: FONTS.regular,
-              lineHeight: SIZES.large,
-            }}>
-              To request this service, press the "Add Service" button below and someone will reach out through email to contact you for more information.
-            </Text>
-      {/* <EndDate /> */}
-    </View>
-  );
-};

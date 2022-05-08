@@ -3,9 +3,11 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { AuthProvider } from "./providers/AuthProvider";
+import Req from "./screens/Requests";
 import Home from "./screens/Home";
 import Details from "./screens/Details";
 import { WelcomeView } from "./screens/welcome";
+
 const theme = {
   ...DefaultTheme,
   colors: {
@@ -39,10 +41,11 @@ const App = () => {
         <Stack.Screen
             name="Welcome View"
             component={WelcomeView}
-            options={{ title: "Task Tracker" }}
+            options={{ title: "Jordyn Fulbright" }}
           />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="request" component={Req} />
       </Stack.Navigator>
     </NavigationContainer>
     </AuthProvider>

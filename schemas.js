@@ -1,16 +1,16 @@
 import { ObjectId } from "bson";
 
-class Task {
+class Request {
   /**
    *
    * @param {string} name The name of the task
-   * @param {string status The status of the task. Default value is "Open"
-   * @param {ObjectId} id The ObjectId to create this task with
+   * @param {string status The status of the request. Default value is "Open"
+   * @param {ObjectId} id The ObjectId to create this request with
    */
   constructor({
     name,
     partition,
-    status = Task.STATUS_OPEN,
+    status = Request.STATUS_OPEN,
     id = new ObjectId(),
   }) {
     this._partition = partition;
@@ -23,7 +23,7 @@ class Task {
   static STATUS_IN_PROGRESS = "InProgress";
   static STATUS_COMPLETE = "Complete";
   static schema = {
-    name: "Task",
+    name: "Request",
     properties: {
       _id: "objectId",
       name: "string",
@@ -33,4 +33,4 @@ class Task {
   };
 }
 
-export { Task };
+export { Request };
