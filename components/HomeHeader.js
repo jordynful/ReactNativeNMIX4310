@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, Image, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { COLORS, FONTS, SIZES, assets, SHADOWS } from "../constants";
-import { RectButton, CircleButton } from "./Button";
+import { RectButton, CircleButton, RectButton2 } from "./Button";
 const HomeHeader = ({ onSearch }) => {
     const navigation = useNavigation();
   return (
@@ -29,7 +29,7 @@ const HomeHeader = ({ onSearch }) => {
           alignSelf: "center"}}>
              Jordyn Fulbright
          </Text>
-         <RectButton minWidth={170} fontSize={SIZES.large} text={"Requests"} 
+         <RectButton2 minWidth={170} fontSize={SIZES.large} text={"Service Requests"} 
                 {...SHADOWS.dark} 
                 handlePress={() => navigation.navigate("request")}/>
           

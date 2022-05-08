@@ -53,3 +53,32 @@ export const RectButton = ({ minWidth, fontSize, handlePress, text, ...props }) 
     </TouchableOpacity>
   );
 };
+
+
+export const RectButton2 = ({ minWidth, fontSize, handlePress, text, ...props }) => {
+  return (
+    <TouchableOpacity
+      style={{
+        backgroundColor: COLORS.primary,
+        padding: SIZES.small,
+        borderRadius: SIZES.extraLarge,
+        width:110,
+        ...props,
+        height: 100
+      }}
+      onPress={handlePress}
+    >
+      <Text
+        style={{
+          fontFamily: FONTS.semiBold,
+          fontSize: fontSize,
+          color: COLORS.white,
+          textAlign: "center",
+          marginTop: 12.5
+        }}
+      >
+       {text}
+      </Text>
+    </TouchableOpacity>
+  );
+};
